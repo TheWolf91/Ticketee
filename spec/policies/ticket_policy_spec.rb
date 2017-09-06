@@ -14,6 +14,7 @@ RSpec.describe TicketPolicy do
 
       it { should_not permit_action :show }
       it { should_not permit_action :create }
+      it { should_not permit_action :update }
     end
 
     context "for viewers of the project" do
@@ -21,6 +22,7 @@ RSpec.describe TicketPolicy do
 
       it { should permit_action :show }
       it { should_not permit_action :create }
+      it { should_not permit_action :update }
     end
 
     context "for editors of the project" do
@@ -28,6 +30,16 @@ RSpec.describe TicketPolicy do
 
       it { should permit_action :show }
       it { should permit_action :create }
+      it { should_not permit_action :update }
+    end
+
+    context "when the editor created the ticket" do   # assign_role! aggiunto da me, per problema di incompatibilità tra rails 4 e 5
+      before do
+        assign_role!(user, :editor, project)
+        ticket.author = user
+      end
+
+      it { should permit_action :update }
     end
 
     context "for managers of the project" do
@@ -35,6 +47,7 @@ RSpec.describe TicketPolicy do
 
       it { should permit_action :show }
       it { should permit_action :create }
+      it { should permit_action :update }
     end
 
     context "for managers of other projects" do
@@ -42,6 +55,7 @@ RSpec.describe TicketPolicy do
 
       it { should_not permit_action :show }
       it { should_not permit_action :create }
+      it { should_not permit_action :update }
     end
 
     context "for administrators" do
@@ -49,6 +63,7 @@ RSpec.describe TicketPolicy do
 
       it { should permit_action :show }
       it { should permit_action :create }
+      it { should permit_action :update }
     end
   end
 end
