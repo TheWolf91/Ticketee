@@ -36,9 +36,12 @@ gem 'bcrypt', platforms: :ruby
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+
 gem 'simple_form', '~> 3.5'
 gem 'devise', '~> 4.3'
 gem 'pundit', '~> 1.1'
+
+gem 'carrierwave', '~> 1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
