@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170909143251) do
+ActiveRecord::Schema.define(version: 20170909162535) do
+
+  create_table "attachments", force: :cascade do |t|
+    t.string "file"
+    t.integer "ticket_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ticket_id"], name: "index_attachments_on_ticket_id"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
@@ -36,7 +44,6 @@ ActiveRecord::Schema.define(version: 20170909143251) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "author_id"
-    t.string "attachment"
   end
 
   create_table "users", force: :cascade do |t|
