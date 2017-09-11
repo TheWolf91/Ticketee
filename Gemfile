@@ -21,8 +21,6 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -46,14 +44,15 @@ gem 'carrierwave', '~> 1.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # Adds support for Capybara system testing and selenium driver
-  gem 'selenium-webdriver'
+  # Adds support for Capybara system testing
   gem 'rspec-rails', '~> 3.6', '>= 3.6.1'
 end
 
 group :test do
   gem "capybara", "~> 2.4"
   gem 'factory_girl_rails', '~> 4.8'
+  gem 'selenium-webdriver', '~> 3.5.2', '>= 3.5.2'
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
 end
 
 group :development do
