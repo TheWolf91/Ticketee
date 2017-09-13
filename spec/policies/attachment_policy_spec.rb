@@ -6,7 +6,7 @@ RSpec.describe AttachmentPolicy do
 
     let(:user) { FactoryGirl.create(:user) }
     let(:project) { FactoryGirl.create(:project) }
-    let(:ticket) { FactoryGirl.create(:ticket, project: project, author: User.new) }
+    let(:ticket) { FactoryGirl.create(:ticket, project: project) }
     let(:attachment) { FactoryGirl.create(:attachment, ticket: ticket) }
 
     context "for anonymous users" do

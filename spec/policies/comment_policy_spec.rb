@@ -6,8 +6,8 @@ RSpec.describe CommentPolicy do
 
     let(:user) { FactoryGirl.create(:user) }
     let(:project) { FactoryGirl.create(:project) }
-    let(:ticket) { FactoryGirl.create(:ticket, project: project, author: User.new) }  #"author: User.new" è stato aggiunto perché era un parametro richiesto,
-    let(:comment) { FactoryGirl.create(:comment, ticket: ticket, author: User.new) }  # ma Rails 4 avrebbe fatto passare il test anche senza
+    let(:ticket) { FactoryGirl.create(:ticket, project: project) }  #"author: User.new" è stato aggiunto perché era un parametro richiesto,
+    let(:comment) { FactoryGirl.create(:comment, ticket: ticket) }  # ma Rails 4 avrebbe fatto passare il test anche senza
 
     context "for anonymous users" do
       let(:user) { nil }

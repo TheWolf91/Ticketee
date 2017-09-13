@@ -6,7 +6,7 @@ RSpec.describe TicketPolicy do
 
     let(:user) { FactoryGirl.create(:user) }
     let(:project) { FactoryGirl.create(:project) }
-    let(:ticket) { FactoryGirl.create(:ticket, project: project, author: User.new) }  #"author: User.new" è stato aggiunto perché era un parametro richiesto,
+    let(:ticket) { FactoryGirl.create(:ticket, project: project) }  #"author: User.new" è stato aggiunto perché era un parametro richiesto,
                                                                                       # ma Rails 4 avrebbe fatto passare il test anche senza
 
     context "for anonymous users" do
@@ -36,7 +36,7 @@ RSpec.describe TicketPolicy do
       it { should_not permit_action :destroy }
     end
 
-    context "when the editor created the ticket" do   # assign_role! aggiunto da me, per problema di incompatibilità tra rails 4 e 5
+    context "when the editor created the ticket" do # assign_role! aggiunto da me, per problema di incompatibilità tra rails 4 e 5
       before do
         assign_role!(user, :editor, project)
         ticket.author = user
