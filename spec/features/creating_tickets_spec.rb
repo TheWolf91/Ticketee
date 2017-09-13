@@ -1,6 +1,7 @@
 require "rails_helper"
 
 RSpec.feature "Users can create new tickets" do
+  let(:state) { FactoryGirl.create(:state) }
   let(:user) { FactoryGirl.create(:user) }
 
   before do
