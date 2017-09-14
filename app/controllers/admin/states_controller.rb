@@ -1,5 +1,6 @@
 class Admin::StatesController < Admin::ApplicationController
-  before_action :set_state, only: [:edit, :update, :destroy]
+  before_action :set_state, only: [:edit, :update, :make_default, :destroy]
+
   def index
     @states = State.all
   end
@@ -34,11 +35,16 @@ class Admin::StatesController < Admin::ApplicationController
   end
 
   def destroy
-    if @state.destroy
-      flash[:notice] = "State has been deleted."
-    else
-      flash[:alert] = "State has not been deleted."
-    end
+    @state.destroy
+    flash[:notice] = "State has been deleted."
+
+    redirect_to admin_states_path
+  end
+
+  def make_default
+    @state.make_default!
+    flash[:notice] = "'#{@state.name}' is now the default state."
+
     redirect_to admin_states_path
   end
 
