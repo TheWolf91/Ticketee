@@ -8,6 +8,12 @@
 
 <ul class="states">
   <% @states.each do |state| %>
-      <li><%= render "states/state", state: state %></li>
+      <li><%= render "states/state", state: state %>
+        <div class="pull-right">
+        <%= link_to "Edit State", [:edit, :admin, state], class: "edit" %>
+          <%= link_to "Delete State", [:admin, state], method: :delete, data: { confirm: "Are you sure you want to delete this state?" }, class: "delete" %>
+        </div>
+      </li>
+      <hr>
   <% end %>
 </ul>
