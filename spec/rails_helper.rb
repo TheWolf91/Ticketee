@@ -58,6 +58,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   config.include Warden::Test::Helpers, type: :feature
   config.after(type: :feature) { Warden.test_reset! }
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   # Force Selenium WebDriver to use Chrome's driver instead of default browser's driver
   Capybara.register_driver :chrome do |app|
