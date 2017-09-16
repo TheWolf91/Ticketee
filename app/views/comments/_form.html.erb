@@ -5,7 +5,8 @@
 <%= simple_form_for [ticket, comment] do |f| %>
     <%= f.input :text %>
     <% if policy(ticket).change_state? %>
-        <%= f.association :state %>
+        <%= f.association :state, f: f %>
     <% end %>
+    <%= render "tags/form", f: f %>
     <%= f.submit class: "btn btn-primary" %>
 <% end %>
