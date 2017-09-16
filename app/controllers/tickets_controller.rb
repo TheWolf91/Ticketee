@@ -9,7 +9,8 @@ class TicketsController < ApplicationController
   end
 
   def create
-    @ticket = @project.tickets.build(ticket_params)
+    @ticket = @project.tickets.new
+    @ticket.attributes = sanitize_parameters
     @ticket.author = current_user
     authorize @ticket, :create?
 
@@ -64,6 +65,16 @@ class TicketsController < ApplicationController
 
   def ticket_params
     params.require(:ticket).permit(:name, :description, :tag_names, attachments_attributes: [:file, :file_cache])
+  end
+
+  def sanitize_parameters
+    whitelisted_params = ticket_params
+
+    unless policy(@ticket).tag?
+      whitelisted_params.delete(:tag_names)
+    end
+
+    return whitelisted_params
   end
 
 end
