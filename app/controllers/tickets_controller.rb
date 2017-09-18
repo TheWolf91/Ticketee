@@ -28,6 +28,17 @@ class TicketsController < ApplicationController
     @comment = @ticket.comments.build(state_id: @ticket.state_id)
   end
 
+  def search
+    authorize @project, :show?
+    search = params[:term].present? ? params[:term] : nil
+    @tickets = if search
+                 @project.tickets.search(search, fields: [:name], match: :word_start)
+               else
+                 @project.tickets
+               end
+    render "projects/show"
+  end
+
   def edit
     authorize @ticket, :update?
   end

@@ -7,6 +7,8 @@ class Ticket < ApplicationRecord
   has_and_belongs_to_many :tags, uniq: true
   attr_accessor :tag_names
 
+  searchkick word_start: [:name]
+
   validates :name, presence: true
   validates :description, presence: true, length: { minimum: 10 }
 

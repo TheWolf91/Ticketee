@@ -2,6 +2,7 @@
 require 'spec_helper'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'pundit/rspec'
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
@@ -66,4 +67,8 @@ RSpec.configure do |config|
   end
 
   Capybara.javascript_driver = :chrome
+
+  config.before :each do
+    Ticket.reindex
+  end
 end
