@@ -67,8 +67,4 @@ RSpec.configure do |config|
   end
 
   Capybara.javascript_driver = :chrome
-
-  config.before :each do
-    Ticket.reindex
-  end
 end

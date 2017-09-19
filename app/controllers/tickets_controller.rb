@@ -30,6 +30,7 @@ class TicketsController < ApplicationController
 
   def search
     authorize @project, :show?
+    Ticket.reindex
     search = params[:term].present? ? params[:term] : nil
     @tickets = if search
                  @project.tickets.search(search, fields: [:name], match: :word_start)
