@@ -17,6 +17,7 @@
 !/log/.keep
 !/tmp/.keep
 uploads
+.idea/workspace.xml
 
 /node_modules
 /yarn-error.log
