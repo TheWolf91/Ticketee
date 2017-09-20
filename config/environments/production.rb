@@ -91,7 +91,7 @@ Rails.application.configure do
 
   ActionMailer::Base.delivery_method = :smtp
 
-  host = "https://still-retreat-75901.herokuapp.com/"
+  host = "still-retreat-75901.herokuapp.com"
 
   ActionMailer::Base.smtp_settings = {
       port: ENV['587'],
