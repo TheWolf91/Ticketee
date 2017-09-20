@@ -6,6 +6,7 @@ class Comment < ApplicationRecord
   delegate :project, to: :ticket
   scope :persisted, lambda { where.not(id: nil) }
   attr_accessor :tag_names
+  after_create :author_watches_ticket
 
   validates :text, presence: true
   before_create :set_previous_state
@@ -31,4 +32,9 @@ class Comment < ApplicationRecord
     end
   end
 
+  def author_watches_ticket
+    if author.present? && !ticket.watchers.include?(author)
+      ticket.watchers << author
+    end
+  end
 end
