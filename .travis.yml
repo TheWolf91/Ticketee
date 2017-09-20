@@ -2,5 +2,12 @@ language: ruby
 rvm: 2.4.1
 script: bundle exec rspec
 before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+deploy:
+  provider: heroku
+  api_key:
+    secure: iXNaG5Prtrmi5kQO30XNF6/mW8vKgwfsEUwPmj7M3e+IcNKvGT1uBBNAp/+k55kJCkFojoxfu4B1aLwyGlUbU0EpKzJO+0MSEjdTYUaCNQ6+5l7T6OURHALbXP/FThA40CKqfyNNfnZpKRm9GXKVmwqUHk4epMoHRJS3LHQRQMOAOVztJl1DxN25l+llbasIBbW3zPQBwtnghcLkNQ2J9bTnm/kZ8FeJZadNumHOTLv1MSK+eL0k6VmtNw3EglQI1aFnXjxlRd2yS2KCpxOOHYb2Avr7xIXIyRM2p/dTLqhm8r0k3E6kZB6n6cRx4as5NUTcfDkQVzEy0wJH0S5WvVv6/6+6iaZaokeCnAj+IHBN4dAjc89/DRXW3E760gPGTUrhVnpZ3lIhGbW33QxGsavSOnTLST8txGFimyCIKwNhiaz6Kx8n2bmMcWMeNGrc//Wv40V6l0LQKzNL8qf+n1MV4CkKKoM+5Lp91GCseU85HxzD/WbZVGcsHpKV4ikcFj/wNlsx4WIYjcQblH11dA1RHrx5uImjFtd4Aprw90xHiabTkK8vIGtgWSeRaF00wLdcaOfNWGWaLIWcaxMw/qV2rHA4fU8/Lb78v0AgHJ+1aBgmzr5FeNCfoO6FmUAmRRpuCP3eNfBEJoDwwc1CyrL5T7TmS1DBXjqaAJrwAd4=
+  app: Ticketee
+  on:
+    repo: TheWolf91/Ticketee
