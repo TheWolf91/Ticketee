@@ -91,14 +91,14 @@ Rails.application.configure do
 
   ActionMailer::Base.delivery_method = :smtp
 
-  host = "https://still-retreat-75901.herokuapp.com/"
+  host = "still-retreat-75901.herokuapp.com"
 
   ActionMailer::Base.smtp_settings = {
       port: ENV['587'],
       address: ENV['smtp.mailgun.org'],
       user_name: ENV['postmaster@sandbox0df533a2c1524d70ac2782bf6af227b2.mailgun.org'],
       password: ENV['29af2e294141a5067e4a88de0eeb8cba'],
-      domain: ENV[host],
+      domain: host,
       authentication: :plain,
   }
 
