@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="538fa9e0-e229-44be-b49b-30f5b86594af" name="Default" comment="">
+    <list default="true" id="0419a98a-79ba-40fe-b719-45f40d2ae492" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <ignored path="$PROJECT_DIR$/.bundle/" />
-    <ignored path="$PROJECT_DIR$/components/" />
-    <ignored path="$PROJECT_DIR$/public/system/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <ignored path="$PROJECT_DIR$/vendor/bundle/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +75,8 @@
       <file leaf-file-name="production.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="100" column="18" lean-forward="false" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+            <state relative-caret-position="652">
+              <caret line="97" column="39" lean-forward="true" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -137,81 +131,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/app/views/admin/states/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/states_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/state.rb" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
-        <option value="$USER_HOME$/Desktop/Ticketee.html" />
-        <option value="$PROJECT_DIR$/db/migrate/20170916103937_create_join_table_tags_tickets.rb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/app/views/tags/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/tickets/_form.html.erb" />
-        <option value="$PROJECT_DIR$/spec/controllers/comments_controller_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/policies/ticket_policy_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/controllers/tickets_controller_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/features/creating_comments_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/features/creating_tickets_spec.rb" />
-        <option value="$PROJECT_DIR$/app/views/comments/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/tags.coffee" />
-        <option value="$PROJECT_DIR$/app/controllers/tags_controller.rb" />
-        <option value="$PROJECT_DIR$/spec/features/deleting_tags_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/support/capybara_finders.rb" />
-        <option value="$PROJECT_DIR$/app/policies/ticket_policy.rb" />
-        <option value="$PROJECT_DIR$/app/views/tickets/search.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/projects_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/projects_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/responsive.scss" />
-        <option value="$PROJECT_DIR$/app/views/projects/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/tags/_tag.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/tag.rb" />
-        <option value="$PROJECT_DIR$/spec/features/searching_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/support/email_spec.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20170919143534_create_join_table_ticket_watchers.rb" />
-        <option value="$PROJECT_DIR$/app/models/ticket.rb" />
-        <option value="$PROJECT_DIR$/app/mailers/application_mailer.rb" />
-        <option value="$PROJECT_DIR$/app/services/comment_creator.rb" />
-        <option value="$PROJECT_DIR$/app/mailers/comment_notifier_mailer.rb" />
-        <option value="$PROJECT_DIR$/config/environments/test.rb" />
-        <option value="$PROJECT_DIR$/spec/rails_helper.rb" />
-        <option value="$PROJECT_DIR$/spec/mailers/comment_notifier_spec.rb" />
-        <option value="$PROJECT_DIR$/app/views/comment_notifier_mailer/created.text.erb" />
-        <option value="$PROJECT_DIR$/spec/features/ticket_notifications_spec.rb" />
-        <option value="$PROJECT_DIR$/app/models/comment.rb" />
-        <option value="$PROJECT_DIR$/spec/features/watching_tickets_spec.rb" />
-        <option value="$PROJECT_DIR$/app/views/tickets/show.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/tickets_controller.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/tickets_helper.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/tickets.scss" />
-        <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
-      </list>
-    </option>
-  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsFlowSettings">
-    <service-enabled>false</service-enabled>
-    <exe-path />
-    <annotation-enable>false</annotation-enable>
-    <other-services-enabled>false</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="305" />
-    <option name="y" value="80" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -262,20 +186,6 @@
         </subPane>
       </pane>
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\The_Wolf\RubymineProjects\Ticketee\app\views\admin\projects" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\The_Wolf\RubymineProjects\Ticketee\app\views\admin\projects" />
-      <recent name="C:\Users\The_Wolf\RubymineProjects\Ticketee\spec\features\admin" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -332,12 +242,12 @@
       <workItem from="1505727583418" duration="10458000" />
       <workItem from="1505746230502" duration="1651000" />
       <workItem from="1505827150157" duration="7072000" />
-      <workItem from="1505900566562" duration="8125000" />
+      <workItem from="1505900566562" duration="8309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256892000" />
+    <option name="totallyTimeSpent" value="257076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -735,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="100" column="18" lean-forward="false" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+        <state relative-caret-position="652">
+          <caret line="97" column="39" lean-forward="true" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
           <folding />
         </state>
       </provider>
