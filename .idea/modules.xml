@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Ticketee.iml" filepath="$PROJECT_DIR$/.idea/Ticketee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ticketee_api/.idea/ticketee_api.iml" filepath="$PROJECT_DIR$/../ticketee_api/.idea/ticketee_api.iml" />
     </modules>
   </component>
 </project>
